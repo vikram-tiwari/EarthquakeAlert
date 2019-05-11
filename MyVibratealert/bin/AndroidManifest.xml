@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vik.myvibratealert"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.vik.myvibratealert.Myvibratealert"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>s
+        <service android:name="com.vik.myvibratealert.VibrateService">
+        </service>
+        <activity android:name="com.vik.myvibratealert.Alarmtone"
+            android:label="AlarmTones"></activity>
+        <activity android:name="com.vik.myvibratealert.Alertcontacts"
+            android:label="Mycontacts"></activity>
+        <provider android:name="com.vik.myvibratealert.Conprovider"
+            android:authorities="com.vik.vibrationealert.earth" ></provider>
+    </application>
+    
+
+</manifest>

@@ -1,0 +1,7 @@
+INDEX VERSION 1.127+D:\Earthquake alert\.metadata\.plugins\org.eclipse.jdt.core
+2819872237.index
+8696917.index
+4026595364.index
+4172576062.index
+3763176022.index
+1924601239.index

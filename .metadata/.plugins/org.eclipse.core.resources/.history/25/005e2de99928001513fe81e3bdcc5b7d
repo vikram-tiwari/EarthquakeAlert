@@ -1,0 +1,39 @@
+package com.vik.myvibratealert;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class Myvibratealert extends Activity {
+TextView tv;
+Button b1,b2;
+Intent i;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.myvibratealert);
+        tv=(TextView)findViewById(R.id.textView1);
+        b1=(Button)findViewById(R.id.button1);
+        b2=(Button)findViewById(R.id.button2);
+        i=new Intent(Myvibratealert.this,VibrateService.class);
+        
+    }
+ public void startalert(View v){
+    	
+    	startService(i);
+    }
+ public void stopalert(View v){
+ 	
+ 	stopService(i);
+ }
+ public void getvalues(float a,float b,float c){
+	 tv.setText(""+a+" "+b+" "+c);
+ 
+ }
+}
